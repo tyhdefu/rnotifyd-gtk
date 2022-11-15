@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/org/jameshendry/rnotifyd/">
+        <file compressed="true" preprocess="xml-stripblanks">window.ui</file>
+        <file compressed="true" preprocess="xml-stripblanks">job_info.ui</file>
+        <file compressed="true" preprocess="xml-stripblanks">section.ui</file>
+    </gresource>
+</gresources>

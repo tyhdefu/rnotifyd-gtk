@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <template class="RnotifydJobInfo" parent="GtkBox">
+        <property name="margin-top">12</property>
+        <property name="margin-bottom">12</property>
+        <property name="margin-start">24</property>
+        <property name="margin-end">24</property>
+
+        <property name="orientation">vertical</property>
+
+        <child>
+            <object class="GtkFrame">
+                <property name="margin-bottom">12</property>
+                <child>
+                    <object class="RnotifydSection">
+                        <property name="title">Job</property>
+
+                        <child>
+                            <object class="GtkDropDown" id="action_type"/>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </child>
+
+        <child>
+            <object class="GtkFrame">
+                <child>
+                    <object class="RnotifydSection" id="notify_definition">
+                        <property name="title">Notification</property>
+
+                        <child>
+                            <object class="GtkBox">
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Title</property>
+                                        <property name="margin-end">30</property>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkEntry" id="title">
+                                        <property name="placeholder-text" translatable="yes">Title…</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkEntry" id="component">
+                                <property name="placeholder-text" translatable="yes">Component…</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkFrame">
+                <child>
+                    <object class="RnotifydSection" id="frequency">
+                        <property name="title">Frequency</property>
+
+                    </object>
+                </child>
+            </object>
+        </child>
+    </template>
+</interface>

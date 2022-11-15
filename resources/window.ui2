@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <template class="RnotifydGtkAppWindow">
+        <property name="width-request">360</property>
+        <property name="title" translatable="yes">To-Do</property>
+        <child>
+            <object class="GtkPaned" id="paned">
+                <property name="orientation">horizontal</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+
+                <property name="position">100</property>
+                <child>
+                    <object class="GtkScrolledWindow">
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="min-content-width">360</property>
+                        <property name="height-request">600</property>
+
+                        <child>
+                            <object class="GtkListBox" id="job_list">
+                                <property name="margin-top">12</property>
+                                <property name="margin-bottom">12</property>
+                                <property name="margin-start">12</property>
+                                <property name="margin-end">12</property>
+
+                                <child>
+                                    <object class="RnotifydAddJobButton" id="add_job_button">
+                                        <property name="label">+</property>
+                                        <property name="margin-top">6</property>
+                                        <property name="margin-bottom">6</property>
+                                        <property name="margin-start">6</property>
+                                        <property name="margin-end">6</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkButton">
+                        <property name="label">im on the right!</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </template>
+</interface>
