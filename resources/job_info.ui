@@ -18,6 +18,11 @@
                         <child>
                             <object class="GtkDropDown" id="action_type"/>
                         </child>
+                        <child>
+                            <object class="GtkLabel">
+                                <property name="label">hello</property>
+                            </object>
+                        </child>
                     </object>
                 </child>
             </object>
@@ -25,28 +30,89 @@
 
         <child>
             <object class="GtkFrame">
+                <property name="margin-bottom">12</property>
+
                 <child>
                     <object class="RnotifydSection" id="notify_definition">
                         <property name="title">Notification</property>
 
                         <child>
-                            <object class="GtkBox">
+                            <object class="GtkGrid">
+                                <property name="margin-start">12</property>
+                                <property name="margin-end">12</property>
+
+                                <property name="column-spacing">6</property>
+                                <property name="row-spacing">6</property>
+
                                 <child>
                                     <object class="GtkLabel">
                                         <property name="label">Title</property>
-                                        <property name="margin-end">30</property>
+
+                                        <layout>
+                                            <property name="column">0</property>
+                                            <property name="row">0</property>
+                                        </layout>
                                     </object>
                                 </child>
                                 <child>
-                                    <object class="GtkEntry" id="title">
+                                    <object class="GtkEntry" id="notification_title">
+                                        <property name="hexpand">true</property>
+
                                         <property name="placeholder-text" translatable="yes">Title…</property>
+
+                                        <layout>
+                                            <property name="column">1</property>
+                                            <property name="row">0</property>
+                                        </layout>
                                     </object>
                                 </child>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkEntry" id="component">
-                                <property name="placeholder-text" translatable="yes">Component…</property>
+
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Component (kebab-case)</property>
+
+                                        <layout>
+                                            <property name="column">0</property>
+                                            <property name="row">1</property>
+                                        </layout>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkEntry" id="notification_component">
+                                        <property name="hexpand">true</property>
+
+                                        <property name="placeholder-text" translatable="yes">Component…</property>
+
+                                        <layout>
+                                            <property name="column">1</property>
+                                            <property name="row">1</property>
+                                        </layout>
+                                    </object>
+                                </child>
+
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Report successful jobs</property>
+
+                                        <layout>
+                                            <property name="column">0</property>
+                                            <property name="row">2</property>
+                                        </layout>
+                                    </object>
+                                </child>
+
+                                <child>
+                                    <object class="GtkSwitch" id="notification_report_successful_jobs">
+                                        <property name="halign">center</property>
+                                        <property name="hexpand">false</property>
+
+                                        <layout>
+                                            <property name="column">1</property>
+                                            <property name="row">2</property>
+                                        </layout>
+                                    </object>
+                                </child>
+
                             </object>
                         </child>
                     </object>
